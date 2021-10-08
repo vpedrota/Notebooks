@@ -9,6 +9,15 @@ class intervalMatriz:
         self.__columns = columns
         self.matriz = []
 
+    def see_Intervals(self):
+        if(self.__lines <= 0 or self.__columns <= 0):
+            raise ValueError("invalid matriz size!")
+
+        for i in self.__lines:
+            for j in self.__columns:
+                if(self.matriz[i][j]['end'] < self.matriz[i][j]['initial']):
+                    raise ValueError("Invalid interval")
+
     def get_lines(self):
         return self.__lines 
 
@@ -43,8 +52,11 @@ class Problem:
             self.arc_input = open(self.input, "r")
             self.arc_output = open(self.output, "w")
             print("Succesful!")
+            return True
         except FileNotFoundError:
             print("Archive input.txt not found")
+            return False
+            
 
 
     def readMatriz(self):
@@ -77,6 +89,7 @@ class Problem:
             matrizB.append({'initial' : initial, 'end' : end}) 
 
         self.matrizB.set_matriz(matrizB)
+        self.arc_input.close()
         
 
     def solve(self):
@@ -113,9 +126,10 @@ class Problem:
       
         
         self.arc_output.close()
+    
 
 
 prob = Problem("input.txt")
-prob.open_archives()
-prob.readMatriz()
-prob.solve()
+if(prob.open_archives()):
+    prob.readMatriz()
+    prob.solve()
