@@ -1,4 +1,3 @@
-#importando bibliotecas 
 import pulp
 import numpy as np
 import itertools
@@ -116,7 +115,7 @@ class Problem:
         self.arc_output.close()
 
 
-prob = Problem("readme.txt")
+prob = Problem("input.txt")
 prob.open_archives()
 prob.readMatriz()
 prob.solve()
