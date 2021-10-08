@@ -20,7 +20,7 @@ class intervalMatriz:
         return self.matriz 
 
     def set_lines(self, lines):
-        self.__columns = lines
+        self.__lines = lines
 
     def set_columns(self, columns):
         self.__columns = columns
@@ -52,9 +52,10 @@ class Problem:
         m, n = self.arc_input.readline().split(' ')
         m = int(m)
         n = int(n)
-
+        print(m, n)
         self.matriz.set_columns(n);
         self.matriz.set_lines(m);
+        print(self.matriz.get_lines())
 
         matriz = [] 
         for line in range(0, m):
@@ -88,25 +89,29 @@ class Problem:
         min = pulp.LpProblem('intro', pulp.LpMinimize)
         max = pulp.LpProblem('intro', pulp.LpMaximize)
 
-        aux2 = 0
         for row in range(0,  self.matriz.get_lines()):
             for i in itertools.product(['initial','end'], repeat=self.matriz.get_columns()):
                 aux2 = 0
+               
                 for col in range(0, self.matriz.get_columns()):
                     aux2 += (self.matriz.get_matriz()[row][col][i[col]]*var[col])
+                    print(self.matriz.get_matriz()[row][col][i[col]], var[col])
+
                 min += (aux2 <= self.matrizB.get_matriz()[row]['end'])
                 min += (aux2 >= self.matrizB.get_matriz()[row]['initial'])
                 max += (aux2 <= self.matrizB.get_matriz()[row]['end'])
                 max += (aux2 >= self.matrizB.get_matriz()[row]['initial'])
-        
-       
+                
+        print(min)
+
         for x in range(0, self.matriz.get_columns()):
             min += var[x]
             min.solve()
-            print('x' + str(x + 1) + ' está no intervalo: ['  + str(var[x].value()) + ', ', end='')
+            self.arc_output.write('x' + str(x + 1) + ' está no intervalo: ['  + str(var[x].value()) + ', ')
             max += var[x]
             max.solve()
-            print(str(var[x].value()) + ']')
+            self.arc_output.write(str(var[x].value()) + ']\n')
+      
         
         self.arc_output.close()
 
