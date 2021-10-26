@@ -46,4 +46,5 @@ sample = mod.Problem() //by deafult it will be input="input.txt", output="output
 sample = mod.Problem(output="another.txt")
 ```
 ### 3. Read the data and see the output
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Now you can use the functions and you need to take care with some errors that can be raised, I will show some of them. Fist, you need to use the function ```open_archives()```
 
