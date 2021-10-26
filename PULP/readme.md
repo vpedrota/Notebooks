@@ -32,7 +32,7 @@ Sample:
 import ativ1 as mod
 ```
 
-### 2. instantiate
+### 2. Instantiate
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You need instantiate an object of the problem that you want to work on. There are some options that you can choose when you instantiate the problem object, you can change the input and the output file depending how you pass as parameter the input or output file adresses.
 
