@@ -45,5 +45,5 @@ sample = mod.Problem() //by deafult it will be input="input.txt", output="output
 ```
 sample = mod.Problem(output="another.txt")
 ```
-
+### 3. Read the data and see the output
 
