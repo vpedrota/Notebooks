@@ -6,7 +6,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Both of them find possible solutions to a interval linear algebraic system. The .py one requires an .txt file with the input matrices with the  pattern that you can see below.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fist you need to enter the matrix dimensions, so the first line represents the matrix dimensions, line and columns respectively and for the next MxN lines after are the interval for each matrix position. After the MxN lines, you need to enter the B matrix, so the next N lines require N intervals. Given a txt file with that pattern the output will be on output.txt.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; First, you need to enter the matrix dimensions, so the first line represents the matrix dimensions, line and columns respectively and for the next MxN lines after are the interval for each matrix position. After the MxN lines, you need to enter the B matrix, so the next N lines require N intervals. Given a txt file with that pattern the output will be on output.txt.
 
 Sample:
 
