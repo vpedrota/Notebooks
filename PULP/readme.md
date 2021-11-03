@@ -2,7 +2,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Here we have two files that is an exercise avaliable on: https://docs.google.com/document/d/1Psi2QpcCZ6imjuuEEbXjWa62oySUsPpQd--YRbe-BAQ/edit?usp=sharing
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; On th notebook there are a simple solution wihout verifications and the input requires you to enter using the keyboard.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; On the notebook there are a simple solution wihout verifications and the input requires you to enter using the keyboard.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Both of them find possible solutions to a interval linear algebraic system. The .py one requires an .txt file with the input matrices with the  pattern that you can see below.
 
