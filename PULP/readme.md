@@ -48,3 +48,21 @@ sample = mod.Problem(output="another.txt")
 ### 3. Read the data and see the output
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Now you can use the functions and you need to take care with some errors that can be raised, I will show some of them. First, you need to use the function ```open_archives()```
 
+If the input file is not found it will raise some error. After that, you only need to call more two functions ```readMatriz()``` and ```solve()```, see the sample below
+
+```
+prob = Problem("input.txt")
+if(prob.open_archives()):
+    prob.readMatriz()
+    prob.solve()
+```
+If want to solve like the problem on the aproach 4 you need to use the following sample
+
+```
+prob = Problem2("input.txt")
+if(prob.open_archives()):
+    prob.readMatriz()
+    prob.solve()
+```
+
+
